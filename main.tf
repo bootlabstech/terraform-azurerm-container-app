@@ -9,7 +9,7 @@ resource "azurerm_container_app" "example" {
   container_app_environment_id = azurerm_container_app_environment.example.id
   resource_group_name          =  var.resource_group_name
   revision_mode                = var.revision_mode
-
+  workload_profile_name        = "Consumption"
   template {
     container {
       name   = "${var.name}-cnt"
@@ -18,6 +18,7 @@ resource "azurerm_container_app" "example" {
       memory = var.memory
     }
   }
+  
 }
 resource "azurerm_log_analytics_workspace" "example" {
   name                = "${var.name}-logs"
