@@ -3,6 +3,12 @@ resource "azurerm_container_app_environment" "example" {
   location                   = var.location
   log_analytics_workspace_id = azurerm_log_analytics_workspace.example.id
   resource_group_name        = var.resource_group_name
+  workload_profile {
+    name                  = "Consumption"
+    workload_profile_type = "Consumption"
+    minimum_count         = 0
+    maximum_count         = 10
+  }
 }
 resource "azurerm_container_app" "example" {
   name                         = var.name
