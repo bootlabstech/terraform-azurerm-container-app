@@ -3,6 +3,7 @@ resource "azurerm_container_app_environment" "example" {
   location                   = var.location
   log_analytics_workspace_id = azurerm_log_analytics_workspace.example.id
   resource_group_name        = var.resource_group_name
+  public_network_access = var.public_network_access
   workload_profile {
     name                  = "Consumption"
     workload_profile_type = "Consumption"

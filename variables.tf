@@ -26,3 +26,9 @@ variable "memory" {
   type        = string
   description = "image of the container app"
 }
+
+variable "public_network_access" {
+  type = bool
+  default = false
+  
+}
