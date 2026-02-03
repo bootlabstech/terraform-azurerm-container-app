@@ -36,11 +36,7 @@ variable "public_network_access" {
 
 
 # private endpoint
-variable "name" {
-  type        = string
-  description = "Specifies the Name of the Private Endpoint. Changing this forces a new resource to be created."
 
-}
 
 variable "private_endpoint_subnet_id" {
   type        = string
