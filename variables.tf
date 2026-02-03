@@ -43,11 +43,7 @@ variable "private_endpoint_subnet_id" {
   description = "The ID of the Subnet from which Private IP Addresses will be allocated for this Private Endpoint."
 
 }
-variable "private_connection_resource_id" {
-  type        = string
-  description = "The ID of the Private Link Enabled Remote Resource which this Private Endpoint should be connected to."
 
-}
 variable "is_manual_connection" {
   type        = bool
   description = "Does the Private Endpoint require Manual Approval from the remote resource owner?"
